@@ -1,26 +1,29 @@
 import React from 'react';
 import './App.css'
+import Items from './theItems';
+import itemsList from './itemsList';
+import InputForm from './InputForm';
 
-function App() {
+
+
+function createItem (myItems) {
+    return (
+        <Items
+        key = {myItems.id}
+        item = {myItems.item}
+         />
+    );
+}
+
+function App(props) {
 
     return(
         <div className="app-border">
             <div className="app-title">
-                <h3>My To-Do List</h3>
+                <h4>My To-Do List</h4>
             </div>
-            <div className="app-input">
-            <form className="row">
-            <input type="text"  placeholder="Enter Item"/>
-            <button className="btn btn-primary">Add</button>
-            </form>
-            </div>
-            <div className="app-items">
-                <ul>
-                    <li>Go to school</li>
-                    <li>Do assignment</li>
-                    <li>Visit friends</li>
-                </ul>
-            </div>
+            <InputForm />
+            {itemsList.map(createItem)}
             
         </div>
     )
