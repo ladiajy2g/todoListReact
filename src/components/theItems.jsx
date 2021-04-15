@@ -5,7 +5,7 @@ function Items (props){
         <div>
             <div className="app-items">
                 <ul>
-                    <li>{props.item}</li>
+                    <li>{props.theText}</li>
                 </ul>
             </div>
         </div>
