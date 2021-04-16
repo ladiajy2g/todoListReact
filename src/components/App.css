@@ -31,4 +31,5 @@ body {
 
 .app-items li {
     padding-top: 15px;
+    list-style-type: none;
 }
